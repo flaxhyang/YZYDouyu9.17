@@ -98,7 +98,7 @@ package video
 				case "NetStream.Play.StreamNotFound":
 				{
 					trace("StreamNotFound")
-					//this.dispatchEvent(new Event(STOP_VIDEO_EVENT));
+					this.dispatchEvent(new Event(STOP_VIDEO_EVENT));
 					break;
 				}
 				default:

@@ -107,7 +107,7 @@ package
 			///////////////////////////////////////
 			setAutoThank();//自动答谢
 			setAutoMsg();//自动弹幕
-			checkTimer.start();//
+			//checkTimer.start();//
 			//
 			videoTest();
 			
@@ -477,7 +477,16 @@ package
 			socket.addEventListener(Link.LINK_OK,isLinkHandle)
 //			infoData.addEventListener(InfoData.DM_IS_LINK,isLinkHandle);
 			
-
+//			var obj:Object=new Object();
+//			obj["Servers"]='{"Servers":[{"ip":"119.90.49.103","port":"8014"},' +
+//				'{"ip":"119.90.49.108","port":"8036"},' +
+//				'{"ip":"119.90.49.108","port":"8040"},' +
+//				'{"ip":"119.90.49.104","port":"8019"},' +
+//				'{"ip":"119.90.49.110","port":"8047"},' +
+//				'{"ip":"119.90.49.103","port":"8013"},' +
+//				'{"ip":"119.90.49.109","port":"8042"},' +
+//				'{"ip":"119.90.49.109","port":"8044"},' +
+//				'{"ip":"119.90.49.107","port":"8035"}]}';
 			//test 17732
 			//xi 67604
 			//29 55126
@@ -486,7 +495,13 @@ package
 			//longlong 194257
 			//yifan 163843
 			//me 193466
-
+//			obj["RoomId"]="193466";
+//			Param.init(obj);
+//			socket=SocketLink.instant;
+//			socket.MyNewUser();	
+//			
+//			socket.MsgMindFun=msg_decode;
+//			socket.giftMindFun=gift_fish;
 			
 			socket.initService(193466,msg_decode,gift_fish);
 			
@@ -495,7 +510,7 @@ package
 		
 		private var backflag:int=0;
 		private function msg_decode(id:String,name:String,msg:String):void{
-			trace("name="+name,"msg="+msg,"id="+id);
+			//trace("name="+name,"msg="+msg,"id="+id);
 			if(name=="猫小胖杂货铺"){
 				checkTimer.reset();
 				checkTimer.start();
