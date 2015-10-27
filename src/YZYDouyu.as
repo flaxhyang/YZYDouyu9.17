@@ -21,6 +21,7 @@ package
 	
 	import thboard.THBoard;
 	
+	import utils.Authority;
 	
 	import video.Stagevideo;
 	
@@ -72,6 +73,8 @@ package
 		private var backmsg:String;
 		
 		private var socket:Link=Link.instant;
+		
+		private var authority:Authority=Authority.instant;
 		
 		
 		private var checkTimer:Timer;
@@ -342,7 +345,8 @@ package
 				//
 				if(currPlaySP.currYw){
 					//------------------------------------------- temp : 房管组里的id 点歌不扣 鱼丸
-					if(infoData.isGM(currPlaySP.id)){
+//					if(infoData.isGM(currPlaySP.id)){
+					if(authority.privilege(currPlaySP.id)){
 						db.addEventListener(DataBase.UPDATA_CURRYW_COMPLETE,currYWHandle);
 						db.updataSelectPeopleCurrYWTemp(currPlaySP.id);
 					}else{
@@ -503,7 +507,7 @@ package
 //			socket.MsgMindFun=msg_decode;
 //			socket.giftMindFun=gift_fish;
 			
-			socket.initService(193466,msg_decode,gift_fish);
+			socket.initService(163843,msg_decode,gift_fish);
 			
 		
 		}
@@ -559,7 +563,8 @@ package
 				var mvid:int=int(tempArr[1]);
 				if(!mvid)return;
 				if(mvid<300){
-					if(!infoData.isGM(int(id))){
+					//if(!infoData.isGM(int(id))){
+					if(!authority.privilege(int(id))){
 						backmsg="不是房间的超管，不能点播隐藏歌曲哦！[emot:grief]";
 						backMsg(backmsg);
 						return;
@@ -592,7 +597,7 @@ package
 			}else if(tempArr[0]=="切歌"){
 				if(isBeginStopMvTimer)return;
 				//---------------------------------------temp authority
-				if(infoData.isGM(int(id))){				
+				if(authority.isNext(int(id))){				
 					isBeginStopMvTimer=true;
 					sv.stopMTV();
 				}

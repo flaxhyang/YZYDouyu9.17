@@ -145,8 +145,8 @@ package video
 
 		public function PlayMTV(mtv:String):void{
 			trace("mtv="+mtv);
-//			netStream.play("/videos/tt2.flv");
-			netStream.play(mtv);
+			netStream.play("/videos/begin.mp4");
+//			netStream.play(mtv);
 		
 		}
 		

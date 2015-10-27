@@ -38,13 +38,13 @@ package vo
 		//work
 //		public static const MTVImage:String="i:/MTVImage/";
 		//
-//		public static const DataBaseURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/YZYDOUYUData0317.db";
-//		public static const MTVURL:String="i:/mtv/";
-//		public static const MTVImage:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/image/";
-//		public static const AuthorityURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/Authority.txt";
-//		public static const noticeURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/Notice.txt";
-//		public static const mmURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/MM.txt";
-//		public static const mmImage:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/";
+		public static const DataBaseURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/YZYDOUYUData0317.db";
+		public static const MTVURL:String="i:/mtv/";
+		public static const MTVImage:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/image/";
+		public static const AuthorityURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/Authority.txt";
+		public static const noticeURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/Notice.txt";
+		public static const mmURL:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/MM.txt";
+		public static const mmImage:String="D:/Workspace/minGame/YZYDouyu9.17/src/videos/";
 		
 		//home
 //		public static const DataBaseURL:String="G:/FBWORK/YZYDouyu9.25/src/videos/YZYDOUYUData0317.db";
@@ -60,13 +60,13 @@ package vo
 		
 		
 		//发布
-		public static const DataBaseURL:String="C:/YZYDOUYUData.db";
-		public static const MTVURL:String="d:/mtv/";
-		public static const MTVImage:String="d:/MTVImage/";
-		public static const AuthorityURL:String="C:/Authority.txt";
-		public static const noticeURL:String="C:/Notice.txt";
-		public static const mmURL:String="C:/MM.txt";
-		public static const mmImage:String="d:/mmimage/";
+//		public static const DataBaseURL:String="C:/YZYDOUYUData.db";
+//		public static const MTVURL:String="d:/mtv/";
+//		public static const MTVImage:String="d:/MTVImage/";
+//		public static const AuthorityURL:String="C:/Authority.txt";
+//		public static const noticeURL:String="C:/Notice.txt";
+//		public static const mmURL:String="C:/MM.txt";
+//		public static const mmImage:String="d:/mmimage/";
 		
 		
 		public static const TopListWidth:int=170;

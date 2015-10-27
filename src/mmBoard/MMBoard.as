@@ -32,6 +32,8 @@ package mmBoard
 		private var currNum:int;
 		private var currMMvo:MMVo;
 		
+		private var infodata:InfoData=InfoData.instant;
+		
 		public function MMBoard()
 		{
 			super();
@@ -97,6 +99,15 @@ package mmBoard
 				
 			}
 			setWord(str);
+			
+			//设置当前点歌的人的信息
+			if(thName==null){
+				if(selectpeople){
+					infodata.currSelectPeople=selectpeople;
+				}else{
+					infodata.currSelectPeople=null;
+				}
+			}
 		}
 		
 		public function setWord(s:String):void{
