@@ -15,6 +15,7 @@ package utils
 		}
 		
 		private var infoData:InfoData=InfoData.instant;
+		private var mxptalk:mxpTalk=mxpTalk.instant;
 		
 		/**
 		 *  是否拥有特权：1.点歌不扣鱼丸，2.能点隐藏歌曲
@@ -34,12 +35,25 @@ package utils
 		
 		public function isNext(id:int):Boolean{
 			if(infoData.isGM(id)){
+				mxptalk.cutMVTalk1();
 				return true;
 			};
 			var currywNum:int=isYWTop(id);
-			var currPlayNum:int=isYWTop(infoData.currSelectPeople.id);
-			if(currywNum>currPlayNum){
-				return true;
+			if(currywNum<0){
+				mxptalk.cutMVTalkError2();
+				return false;
+			}
+			if(infoData.currSelectPeople==null){
+			   mxptalk.cutMVTalk1();
+			   return true;
+			}else{
+				var currPlayNum:int=isYWTop(infoData.currSelectPeople.id);
+				if(currywNum>=currPlayNum){
+					mxptalk.cutMVTalk1();
+					return true;
+				}else{
+					mxptalk.cutMVTalkError1();
+				}
 			}
 			return false;
 		}

@@ -778,7 +778,7 @@ package database
 					var row:Object = result.data[i];          
 //					trace("sumYW="+row.sumYW);
 					var currsmp:SelectMTVPeople=new SelectMTVPeople();
-					currsmp.id=row.id;
+					currsmp.id=row.nameid;
 					currsmp.name=row.name;
 					currsmp.sumYW=row.sumYW;
 					currsmp.leaveWord=row.leaveWord;	          
