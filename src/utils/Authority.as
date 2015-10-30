@@ -47,8 +47,14 @@ package utils
 			   mxptalk.cutMVTalk1();
 			   return true;
 			}else{
+				//////////////////////////////////////////////////////////
+				if(infoData.currSelectPeople.id==12121212){
+					mxptalk.cutMVTalkError2();
+					return false;
+				}
+				//////////////////////////////////////////////////////////
 				var currPlayNum:int=isYWTop(infoData.currSelectPeople.id);
-				if(currywNum>=currPlayNum){
+				if(currywNum<=currPlayNum){
 					mxptalk.cutMVTalk1();
 					return true;
 				}else{
