@@ -22,6 +22,7 @@ package
 	import thboard.THBoard;
 	
 	import utils.Authority;
+	import utils.mxpTalk;
 	
 	import video.Stagevideo;
 	
@@ -78,6 +79,9 @@ package
 		
 		
 		private var checkTimer:Timer;
+		
+		
+		private var mxptalk:mxpTalk=mxpTalk.instant;
 		
 		public function YZYDouyu()
 		{
@@ -507,7 +511,7 @@ package
 //			socket.MsgMindFun=msg_decode;
 //			socket.giftMindFun=gift_fish;
 			
-			socket.initService(163843,msg_decode,gift_fish);
+			socket.initService(193466,msg_decode,gift_fish);
 			
 		
 		}
@@ -623,6 +627,13 @@ package
 			infoData.setSelectQueueArr(currSelectMTVInfo);
 		}
 		
+		
+		/**
+		 * --------------------------------------------------------------------------鱼丸
+		 * @param id
+		 * @param nick
+		 * @param num
+		 */		
 		private function gift_fish(id:String,nick:String,num:int):void{
 			//trace("鱼丸：=id"+id+"; nick="+nick);
 			var ywNum:Number=num/100;
@@ -639,7 +650,9 @@ package
 		
 		private function backMsg(s:String):void
 		{
-			socket.sendMsg(s);
+//			socket.sendMsg(s);
+			
+			mxptalk.addNewMsg(s);
 			//TextBoard.instant.setZhufu(s);
 		}
 		

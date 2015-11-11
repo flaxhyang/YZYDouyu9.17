@@ -43,13 +43,13 @@ package utils
 				mxptalk.cutMVTalkError2();
 				return false;
 			}
-			if(infoData.currSelectPeople==null){
+			if(infoData.currSelectPeople==null || isYWTop(infoData.currSelectPeople.id)==-1){
 			   mxptalk.cutMVTalk1();
 			   return true;
 			}else{
 				//////////////////////////////////////////////////////////
-				if(infoData.currSelectPeople.id==12121212){
-					mxptalk.cutMVTalkError2();
+				if(infoData.currSelectPeople.id==18070048){
+					mxptalk.cutMVTalkError3();
 					return false;
 				}
 				//////////////////////////////////////////////////////////
