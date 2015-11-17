@@ -66,8 +66,8 @@ package utils
 		}
 		
 		private function sendMsg():void{
-			var s:String=checkAgain(msgs.shift());
-			socket.sendMsg(s);
+			lastmsg=checkAgain(msgs.shift());
+			socket.sendMsg(lastmsg);
 		}
 		
 		

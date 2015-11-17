@@ -496,11 +496,6 @@ package
 //				'{"ip":"119.90.49.109","port":"8044"},' +
 //				'{"ip":"119.90.49.107","port":"8035"}]}';
 			//test 17732
-			//xi 67604
-			//29 55126
-			//二科 78622
-			//卡卡 60843
-			//longlong 194257
 			//yifan 163843
 			//me 193466
 //			obj["RoomId"]="193466";
@@ -512,9 +507,14 @@ package
 //			socket.giftMindFun=gift_fish;
 			
 			socket.initService(193466,msg_decode,gift_fish);
-			
+			socket.setTHwelcome(welcomefun);
 		
 		}
+		//----------------------欢迎土豪
+		private function welcomefun(name:String):void{
+			mmb.titleWord(name);
+		}
+		
 		
 		private var backflag:int=0;
 		private function msg_decode(id:String,name:String,msg:String):void{
