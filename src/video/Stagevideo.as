@@ -127,7 +127,6 @@ package video
 		}
 		
 		protected function _metaDataHandler(info:Object):void {
-			this.metaData = info;
 			if(info.height>info.width){
 				var VideW:int=int(info.width*stage.stageHeight/info.height);
 				var newX:Number=VideNewW-VideW>>1;
